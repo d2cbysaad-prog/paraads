@@ -12,9 +12,26 @@ const labelClass = 'mb-2 block text-xs font-medium uppercase tracking-widest tex
 export function AuditForm() {
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    setIsSubmitting(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbygwNfCG8k6oCiYWknBbra8xFrW4OFXsSg8M135GVlY1KbA1_Dtq21pCVfEgqb9u-xD/exec", {
+        method: "POST",
+        body: formData,
+      })
+      setSubmitted(true)
+    } catch (error) {
+      alert("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -104,11 +121,12 @@ export function AuditForm() {
               </div>
 
               <button
-                type="submit"
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue px-7 py-3.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
-              >
-                Book Free Audit <ArrowRight className="h-4 w-4" />
-              </button>
+  type="submit"
+  disabled={isSubmitting}
+  className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue px-7 py-3.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+>
+  {isSubmitting ? "Submitting..." : "Get My Free Audit"} <ArrowRight className="h-4 w-4" />
+</button>
 
               <p className="mt-4 text-center text-xs text-muted-foreground">
                 We review every submission. Response within 24 hours. No spam ever.
