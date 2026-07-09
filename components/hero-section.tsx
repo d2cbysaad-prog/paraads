@@ -19,7 +19,7 @@ export function HeroSection() {
         </span>
 
         <h1 className="mt-8 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          Same Budget. More Revenue
+          Same Budget More Rev
           <br />
           <span className="text-blue">Attract, Convert & Retain More Customers</span>
         </h1>
