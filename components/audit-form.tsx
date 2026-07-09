@@ -15,25 +15,32 @@ export function AuditForm() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
-    // Form se data utha rahe hain
+    // Form se data nikalna
     const formData = new FormData(e.currentTarget)
-    const websiteInput = formData.get('website') as string
-    
-    // Website processing logic
+    const websiteInput = formData.get('website') as string || ""
     let websiteValue = websiteInput.trim()
+
+    // --- Validation Logic ---
     if (websiteValue === "") {
+      // Agar khali hai to None
       websiteValue = "None"
+    } else if (!websiteValue.includes('.')) {
+      // Agar domain mein dot (.) nahi hai to error denge
+      alert("Please enter a valid website (e.g., yourbrand.com)")
+      return 
     } else if (!websiteValue.startsWith("http")) {
+      // Agar dot hai lekin http nahi, to https laga dein
       websiteValue = "https://" + websiteValue
     }
 
-    // Yahan aap data ko console ya API mein bhej sakte hain
-    // console.log("Final Data:", { 
-    //   name: formData.get('name'), 
-    //   email: formData.get('email'), 
-    //   website: websiteValue, 
-    //   ... 
-    // })
+    // Yahan aap apna data submit kar rahe hain
+    console.log("Form Data Submitted:", {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      website: websiteValue, // Yeh woh clean version hai jo aapko chahiye
+      spend: formData.get('spend'),
+      challenge: formData.get('challenge')
+    })
 
     setSubmitted(true)
   }
@@ -77,7 +84,7 @@ export function AuditForm() {
                   <input
                     id="website"
                     name="website"
-                    type="text" // Yahan 'url' se 'text' kar diya hai
+                    type="text" 
                     placeholder="yourbrand.com"
                     className={inputClass}
                   />
