@@ -16,9 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Built exclusively for supplement brands. Not generalists',
+  title: 'Built exclusively for supplement brands. Not generalists.',
   description:
-    'Most supplement brands have no ads problem.They have an offer problem. A funnel problem. A creative problem.We fix all three — then scale what the data proves.Meta & Google Ads. D2C supplement brands only..',
+    'We run Meta & Google Ads exclusively for D2C nutraceutical brands — fixing offer, creative, funnel, and targeting before spending a single dollar on scale.',
   generator: 'v0.app',
 }
 
