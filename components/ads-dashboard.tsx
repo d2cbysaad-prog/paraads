@@ -24,7 +24,7 @@ export function AdsDashboard() {
           <span aria-hidden="true">📊</span> Campaign Overview
         </span>
         <div className="flex items-center gap-3">
-          <span className="font-mono text-xs text-muted-foreground">Jan 1 – Mar 31, 2024</span>
+          <span className="font-mono text-xs text-muted-foreground">Jan 1 – Mar 31, 2026</span>
           <span className="flex items-center gap-1.5 text-xs text-success">
             <span className="h-2 w-2 rounded-full bg-success" aria-hidden="true" />
             Active
