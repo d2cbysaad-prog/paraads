@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Built exclusively for supplement brands. Not generalists,
+  title: 'Performance Marketing for Supplement Brands — Not Generalists',
   description:
     'We run Meta & Google Ads exclusively for D2C nutraceutical brands — fixing offer, creative, funnel, and targeting before spending a single dollar on scale.',
   generator: 'v0.app',
