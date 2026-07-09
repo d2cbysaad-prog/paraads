@@ -1,5 +1,5 @@
 const row1 = [
-  { label: 'Amount Spent', value: '$121,400' },
+  { label: 'Amount Spent', value: '$12,400' },
   { label: 'Reach', value: '284K' },
   { label: 'Impressions', value: '1.2M' },
   { label: 'CTR', value: '3.8%' },
