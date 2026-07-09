@@ -20,7 +20,7 @@ export function AuditForm() {
     const form = e.currentTarget
     const formData = new FormData(form)
     
-    // Website Validation Logic
+    // 1. Website Validation Logic
     const websiteInput = formData.get('website') as string || ""
     let websiteValue = websiteInput.trim()
     
@@ -34,12 +34,11 @@ export function AuditForm() {
       websiteValue = "https://" + websiteValue
     }
     
-    // Update clean value
     formData.set('website', websiteValue)
 
-    // Google Sheet par bhejna
+    // 2. Data Google Sheet par bhejna
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbx0hfbB0WzyVEHOLH0W-7MQ2OIhl1miKQ-Mhx3FasGDDK65ncG9Mn1H5TuR47HC9rKu/exec?spreadsheetId=11LGL_Qkg4X99hn-67JWvhS42fk0BAMzsp14HXa5Mhuo&sheetId=0&version=1", {
+      await fetch("https://script.google.com/macros/s/AKfycbwhPvBsN08HCwM5v_25LNuKQhUYq5Nu09kQy2xOWmglWIOp6OcZVvSCJ_4zZF6Y0k-o/exec", {
         method: "POST",
         body: formData,
       })
