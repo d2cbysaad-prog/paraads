@@ -43,7 +43,7 @@ export function FinalCta() {
     }
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbynNGx2AJd9Gm2Un6JMTST57xSuQ2SMOI2oT6U8IZ57nOpafXiyMXS6y6_-sc-IqduL/exec', {
+      await fetch('https://script.google.com/racros/s/AKfycbynNGx2AJd9Gm2Un6JMTST57xSuQ2SMOI2oT6U8IZ57nOpafXiyMXS6y6_-sc-IqduL/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
