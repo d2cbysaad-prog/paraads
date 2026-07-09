@@ -18,7 +18,17 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const form = e.currentTarget
+const form = e.currentTarget
+const formData = new FormData(form)
+
+const websiteInput = (formData.get('website') as string) || ""
+const websiteValue = websiteInput.trim()
+
+if (websiteValue !== "" && !websiteValue.match(/\.[a-zA-Z]{2,}$/)) {
+  alert("Please enter a valid website (e.g., yourbrand.com)")
+  setIsSubmitting(false)
+  return
+}
     const formData = new FormData(form)
 
     try {
@@ -87,7 +97,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
                   <input
                     id="website"
                     name="website"
-                    type="url"
+                    type="text"
                     placeholder="yourbrand.com"
                     className={inputClass}
                   />
