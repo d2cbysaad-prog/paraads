@@ -11,38 +11,44 @@ const labelClass = 'mb-2 block text-xs font-medium uppercase tracking-widest tex
 
 export function AuditForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
     
-    // Form se data nikalna
-    const formData = new FormData(e.currentTarget)
+    // Website Validation Logic
     const websiteInput = formData.get('website') as string || ""
     let websiteValue = websiteInput.trim()
-
-    // --- Validation Logic ---
+    
     if (websiteValue === "") {
-      // Agar khali hai to None
       websiteValue = "None"
     } else if (!websiteValue.includes('.')) {
-      // Agar domain mein dot (.) nahi hai to error denge
       alert("Please enter a valid website (e.g., yourbrand.com)")
-      return 
+      setIsSubmitting(false)
+      return
     } else if (!websiteValue.startsWith("http")) {
-      // Agar dot hai lekin http nahi, to https laga dein
       websiteValue = "https://" + websiteValue
     }
+    
+    // Update clean value
+    formData.set('website', websiteValue)
 
-    // Yahan aap apna data submit kar rahe hain
-    console.log("Form Data Submitted:", {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      website: websiteValue, // Yeh woh clean version hai jo aapko chahiye
-      spend: formData.get('spend'),
-      challenge: formData.get('challenge')
-    })
-
-    setSubmitted(true)
+    // Google Sheet par bhejna
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbx0hfbB0WzyVEHOLH0W-7MQ2OIhl1miKQ-Mhx3FasGDDK65ncG9Mn1H5TuR47HC9rKu/exec?spreadsheetId=11LGL_Qkg4X99hn-67JWvhS42fk0BAMzsp14HXa5Mhuo&sheetId=0&version=1", {
+        method: "POST",
+        body: formData,
+      })
+      setSubmitted(true)
+    } catch (error) {
+      alert("Something went wrong, please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -81,13 +87,7 @@ export function AuditForm() {
               <div className="mt-5 grid gap-5 sm:grid-cols-2">
                 <div>
                   <label htmlFor="website" className={labelClass}>Brand Website</label>
-                  <input
-                    id="website"
-                    name="website"
-                    type="text" 
-                    placeholder="yourbrand.com"
-                    className={inputClass}
-                  />
+                  <input id="website" name="website" type="text" placeholder="yourbrand.com" className={inputClass} />
                 </div>
                 <div>
                   <label htmlFor="spend" className={labelClass}>Monthly Ad Spend</label>
@@ -103,20 +103,15 @@ export function AuditForm() {
 
               <div className="mt-5">
                 <label htmlFor="challenge" className={labelClass}>What is your biggest challenge right now?</label>
-                <textarea
-                  id="challenge"
-                  name="challenge"
-                  rows={4}
-                  placeholder="Current ROAS, revenue goal, biggest bottleneck..."
-                  className={`${inputClass} resize-none`}
-                />
+                <textarea id="challenge" name="challenge" rows={4} placeholder="Current ROAS, revenue goal, biggest bottleneck..." className={`${inputClass} resize-none`} />
               </div>
 
               <button
                 type="submit"
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue px-7 py-3.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
+                disabled={isSubmitting}
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue px-7 py-3.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
               >
-                Book Free Audit <ArrowRight className="h-4 w-4" />
+                {isSubmitting ? "Submitting..." : "Book Free Audit"} <ArrowRight className="h-4 w-4" />
               </button>
             </>
           )}
