@@ -21,7 +21,7 @@ export function HeroSection() {
         <h1 className="mt-8 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
           Running ads without results isn't marketing.
           <br />
-          <span className="text-blue">Your sales look exactly like they did 3 months ago.</span>
+          <span className="text-blue">ur sales look exactly like they did 3 months ago.</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
