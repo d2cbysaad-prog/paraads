@@ -36,7 +36,7 @@ export function SiteNav() {
           <span className="font-display text-lg font-bold tracking-tight">Paraads</span>
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
               key={link.href}
