@@ -14,6 +14,27 @@ export function AuditForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    
+    // Form se data utha rahe hain
+    const formData = new FormData(e.currentTarget)
+    const websiteInput = formData.get('website') as string
+    
+    // Website processing logic
+    let websiteValue = websiteInput.trim()
+    if (websiteValue === "") {
+      websiteValue = "None"
+    } else if (!websiteValue.startsWith("http")) {
+      websiteValue = "https://" + websiteValue
+    }
+
+    // Yahan aap data ko console ya API mein bhej sakte hain
+    // console.log("Final Data:", { 
+    //   name: formData.get('name'), 
+    //   email: formData.get('email'), 
+    //   website: websiteValue, 
+    //   ... 
+    // })
+
     setSubmitted(true)
   }
 
@@ -41,47 +62,30 @@ export function AuditForm() {
             <>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className={labelClass}>
-                    Full Name
-                  </label>
+                  <label htmlFor="name" className={labelClass}>Full Name</label>
                   <input id="name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
                 </div>
                 <div>
-                  <label htmlFor="email" className={labelClass}>
-                    Work Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="jane@yourbrand.com"
-                    className={inputClass}
-                  />
+                  <label htmlFor="email" className={labelClass}>Work Email</label>
+                  <input id="email" name="email" type="email" required placeholder="jane@yourbrand.com" className={inputClass} />
                 </div>
               </div>
 
               <div className="mt-5 grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="website" className={labelClass}>
-                    Brand Website
-                  </label>
+                  <label htmlFor="website" className={labelClass}>Brand Website</label>
                   <input
                     id="website"
                     name="website"
-                    type="url"
+                    type="text" // Yahan 'url' se 'text' kar diya hai
                     placeholder="yourbrand.com"
                     className={inputClass}
                   />
                 </div>
                 <div>
-                  <label htmlFor="spend" className={labelClass}>
-                    Monthly Ad Spend
-                  </label>
+                  <label htmlFor="spend" className={labelClass}>Monthly Ad Spend</label>
                   <select id="spend" name="spend" className={inputClass} defaultValue="">
-                    <option value="" disabled>
-                      Select range
-                    </option>
+                    <option value="" disabled>Select range</option>
                     <option value="under-3k">Under $3K</option>
                     <option value="3k-10k">$3K–$10K</option>
                     <option value="10k-30k">$10K–$30K</option>
@@ -91,9 +95,7 @@ export function AuditForm() {
               </div>
 
               <div className="mt-5">
-                <label htmlFor="challenge" className={labelClass}>
-                  What is your biggest challenge right now?
-                </label>
+                <label htmlFor="challenge" className={labelClass}>What is your biggest challenge right now?</label>
                 <textarea
                   id="challenge"
                   name="challenge"
@@ -109,10 +111,6 @@ export function AuditForm() {
               >
                 Book Free Audit <ArrowRight className="h-4 w-4" />
               </button>
-
-              <p className="mt-4 text-center text-xs text-muted-foreground">
-                We review every submission. Response within 24 hours. No spam ever.
-              </p>
             </>
           )}
         </form>
