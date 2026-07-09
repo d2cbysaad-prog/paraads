@@ -19,14 +19,15 @@ export function HeroSection() {
         </span>
 
         <h1 className="mt-8 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          Paid Ads That Actually
+          Your ads are running 
+          Sales aren't going up
           <br />
           <span className="text-blue">Scale Your Supplement Brand</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-          We run Meta &amp; Google Ads exclusively for D2C nutraceutical brands — fixing offer,
-          creative, funnel, and targeting before spending a single dollar on scale.
+          Most supplement brands have no ads problem.They have an offer problem. A funnel problem. A creative problem.
+          We fix all three — then scale what the data proves.
         </p>
 
         <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
