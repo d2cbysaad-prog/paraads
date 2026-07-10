@@ -17,9 +17,9 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Performance Marketing for Supplement Brands — Not Generalists',
+  title: 'ParaAds',
   description:
-    'We are here to run Meta & Google Ads exclusively for D2C nutraceutical brands — fixing offer, creative, funnel, and targeting before spending a single dollar on scale.',
+    'Attract, Convert And Retain More Customers.',
   
 }
 
