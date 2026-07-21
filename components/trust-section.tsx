@@ -16,7 +16,18 @@ export function TrustSection() {
         subtitle="We partner with supplement brands serious about scaling beyond $50K/month."
       />
 
-      className="group relative flex h-28 items-center justify-center overflow-hidden rounded-2xl border border-[#3b82f6]/40 bg-[#2563EB] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1D4ED8] hover:shadow-[0_0_30px_rgba(59,130,246,0.35)]"
+      <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
+        {brands.map((brand, i) => (
+          <div
+            key={i}
+            className="group flex h-28 items-center justify-center rounded-2xl border border-blue-500/40 bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(59,130,246,0.45)]"
+          >
+            <span className="text-center text-sm font-semibold tracking-wide text-white">
+              {brand}
+            </span>
+          </div>
+        ))}
+      </div>
 
       <p className="mt-8 text-center text-sm text-muted-foreground">
         Category exclusivity enforced. We do not onboard competing brands in the same niche.
