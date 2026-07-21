@@ -86,7 +86,7 @@ export function EvidenceSection() {
     <section id="evidence" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
       <SectionHeader
         label="Evidence"
-        title="Case Studies and Verified Outcomes"
+        title="Case Studies and Outcomes"
         subtitle=""
       />
 
