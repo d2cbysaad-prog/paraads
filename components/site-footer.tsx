@@ -30,7 +30,7 @@ export function SiteFooter() {
           </nav>
 
           <p className="text-center text-xs text-muted-foreground">
-            © 2025 Paraads. Performance Marketing for Nutraceuticals.
+            © 2026 Paraads. Performance Marketing for Nutraceuticals.
           </p>
         </div>
 

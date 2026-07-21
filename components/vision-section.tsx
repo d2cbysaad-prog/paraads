@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Pill } from '@/components/primitives'
 import { QuoteIcon } from '@/components/icons'
+import Link from 'next/dist/client/link'
 
 export function VisionSection() {
   return (
@@ -30,7 +31,7 @@ export function VisionSection() {
         <div>
           <Pill>The Paraads Vision</Pill>
           <h2 className="mt-6 text-balance font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[2.75rem]">
-            Revenue is a systems problem.
+            Ads Don't Scale Broken Businesses.
           </h2>
 
           <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
@@ -53,9 +54,21 @@ export function VisionSection() {
             </p>
           </div>
 
-          <div className="mt-6 text-sm font-semibold uppercase tracking-widest text-blue">
-            Saad — Paraads
-          </div>
+         <div className="mt-8">
+  <div className="text-sm font-semibold uppercase tracking-widest text-blue">
+    Saad — Founder & CEO
+  </div>
+
+  <Link
+    href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 inline-flex items-center gap-2 rounded-lg border border-blue/30 bg-card px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-blue hover:bg-blue hover:text-white"
+  >
+    Connect on LinkedIn
+    <span>→</span>
+  </Link>
+</div>
         </div>
       </div>
     </section>
