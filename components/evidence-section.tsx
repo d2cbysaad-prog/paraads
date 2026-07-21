@@ -1,6 +1,7 @@
 import { SectionHeader, Pill } from '@/components/primitives'
 import { AdsDashboard } from '@/components/ads-dashboard'
 import { ArrowRight } from '@/components/icons'
+import { Clock, Lock, Shield } from 'lucide-react'
 
 const beforeList = [
   'Single $30 bottle — no bundles, no AOV strategy',
@@ -88,8 +89,7 @@ export function EvidenceSection() {
         title="Validated results. Real numbers. No projections."
         subtitle="Documented case studies. Every number verified."
       />
-       {/* Disclaimer strip */}
-      <div className="mb-12 flex flex-wrap items-center gap-6 rounded-lg border border-border bg-muted/40 px-5 py-4">
+       <div className="mb-12 flex flex-wrap items-center gap-6 rounded-lg border border-border bg-muted/40 px-5 py-4">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <Shield className="h-4 w-4 shrink-0 text-primary" />
           <span>All results independently verifiable on audit call</span>
