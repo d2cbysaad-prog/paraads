@@ -116,8 +116,8 @@ export function EngineSection() {
     <section id="engine" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 md:py-32">
       <SectionHeader
         label="The Engine"
-        title="One system. Offer, creative, targeting, and scale."
-        subtitle="Every service connects to one outcome — more revenue at a better margin."
+        title="Most agencies launch ads on a broken foundation."
+        subtitle=" We audit the first — because no creative fixes a $30 AOV with $22 CPA."
       />
 
       <div
