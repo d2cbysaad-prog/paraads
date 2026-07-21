@@ -88,6 +88,21 @@ export function EvidenceSection() {
         title="Validated results. Real numbers. No projections."
         subtitle="Documented case studies. Every number verified."
       />
+       {/* Disclaimer strip */}
+      <div className="mb-12 flex flex-wrap items-center gap-6 rounded-lg border border-border bg-muted/40 px-5 py-4">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <Shield className="h-4 w-4 shrink-0 text-primary" />
+          <span>All results independently verifiable on audit call</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <Lock className="h-4 w-4 shrink-0 text-primary" />
+          <span>Brand names withheld — NDA with all active clients</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <Clock className="h-4 w-4 shrink-0 text-primary" />
+          <span>All engagements documented Jan–Apr 2026</span>
+        </div>
+      </div>
 
       {/* Featured case study */}
       <div className="mt-14 rounded-xl border border-border bg-card p-6 sm:p-8 md:p-10">
