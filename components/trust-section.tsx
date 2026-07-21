@@ -1,6 +1,6 @@
 import { SectionHeader } from '@/components/primitives'
 
-const brands = ['Veltara Nutrition', 'Cellurix Labs', 'Braxon Performance', 'Norvia Wellness']
+const brands = ['Sports Nutrition', 'Herbal Wellness', 'Vitamins & Supplements', 'Men & Women Health']
 
 export function TrustSection() {
   return (
