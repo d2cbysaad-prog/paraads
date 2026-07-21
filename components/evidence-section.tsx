@@ -88,8 +88,8 @@ export function EvidenceSection() {
         label="Evidence"
         title="Case Studies and Outcomes"
       />    
-       
-      <div className="mb-12 flex flex-wrap items-center gap-6 rounded-lg border border-border bg-muted/40 px-5 py-4">
+      
+      <div className="mt-14 flex flex-wrap items-center gap-6 rounded-lg border border-border bg-muted/40 px-5 py-4">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <Shield className="h-4 w-4 shrink-0 text-primary" />
           <span>All results independently verifiable on audit call</span>
