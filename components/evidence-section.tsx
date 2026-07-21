@@ -87,7 +87,7 @@ export function EvidenceSection() {
       <SectionHeader
         label="Evidence"
         title="Validated results. Real numbers. No projections."
-        subtitle="Documented case studies. Every number verified."
+        subtitle=""
       />
        <div className="mb-12 flex flex-wrap items-center gap-6 rounded-lg border border-border bg-muted/40 px-5 py-4">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
