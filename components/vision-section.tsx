@@ -60,7 +60,7 @@ export function VisionSection() {
   </div>
 
   <Link
-    href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+    href="https://www.linkedin.com/in/saad-zahid1/"
     target="_blank"
     rel="noopener noreferrer"
     className="mt-4 inline-flex items-center gap-2 rounded-lg border border-blue/30 bg-card px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-blue hover:bg-blue hover:text-white"
