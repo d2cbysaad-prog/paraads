@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description: "Attract, Convert And Retain More Customers.",
 
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
 }
