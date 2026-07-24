@@ -37,10 +37,10 @@ export function SiteNav() {
   <Image
     src="/icon.png"
     alt="PARAADS"
-    width={400}
-    height={90}
+    width={220}
+    height={40}
     priority
-    className="h-16 w-auto sm:h-18 md:h-22 lg:h-24"
+    className="h-8 w-auto sm:h-9 md:h-10 lg:h-11"
   />
 </a>
         {/* Desktop Menu */}
