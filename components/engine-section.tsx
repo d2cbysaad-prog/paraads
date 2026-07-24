@@ -78,7 +78,7 @@ function CounterItem({ counter, active }: { counter: Counter; active: boolean })
   const display = useCountUp(counter.target, active, counter.decimals ?? 0)
   return (
     <div className="text-center">
-      <div className="font-display text-4xl font-bold tracking-tight text-blue sm:text-5xl">
+      <div className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
         {counter.prefix}
         {display}
         {counter.suffix}
