@@ -16,7 +16,7 @@ export function SiteFooter() {
           {/* Yahan shield icon ki jagah logo image laga di hai */}
           <a href="#top" className="flex items-center">
             <Image
-              src="/favicon.png"
+              src="/icon.png"
               alt="PARAADS"
               width={280}
               height={52}
