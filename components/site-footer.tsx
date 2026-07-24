@@ -1,4 +1,4 @@
-import { ShieldIcon } from '@/components/icons'
+import Image from 'next/image'
 
 const links = [
   { label: 'The Problem', href: '#problem' },
@@ -12,9 +12,16 @@ export function SiteFooter() {
     <footer className="border-t border-border">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-          <a href="#top" className="flex items-center gap-2">
-            <ShieldIcon className="h-6 w-6 text-blue" />
-            <span className="font-display text-lg font-bold tracking-tight">Paraads</span>
+          
+          {/* Yahan shield icon ki jagah logo image laga di hai */}
+          <a href="#top" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="PARAADS"
+              width={280}
+              height={52}
+              className="h-9 w-auto sm:h-10 object-contain object-left"
+            />
           </a>
 
           <nav className="flex flex-wrap items-center justify-center gap-6">
