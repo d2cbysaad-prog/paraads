@@ -40,7 +40,7 @@ export function SiteNav() {
     width={350}
     height={100}
     priority
-    className="h-8 w-auto sm:h-9 md:h-10 lg:h-11"
+    className="h-40 w-auto sm:h-60 md:h-100 lg:h-110"
   />
 </a>
         {/* Desktop Menu */}
