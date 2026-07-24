@@ -33,7 +33,7 @@ export function SiteNav() {
       )}
     >
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-3 sm:px-6">
-    <a href="#top" className="flex items-center -ml-5 sm:ml-3">
+    <a href="#top" className="flex items-center -ml-5 sm:ml-0">
   <Image
     src="/icon.png"
     alt="PARAADS"
