@@ -33,14 +33,14 @@ export function SiteNav() {
       )}
     >
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-3 sm:px-6">
-    <a href="#top" className="flex items-center -ml-1 sm:ml-0">
+    <a href="#top" className="flex items-center -ml-5 sm:ml-3">
   <Image
     src="/icon.png"
     alt="PARAADS"
-    width={320}
-    height={70}
+    width={400}
+    height={90}
     priority
-    className="h-14 w-auto sm:h-16 md:h-18 lg:h-20"
+    className="h-16 w-auto sm:h-18 md:h-22 lg:h-24"
   />
 </a>
         {/* Desktop Menu */}
