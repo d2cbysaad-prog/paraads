@@ -37,8 +37,8 @@ export function SiteNav() {
   <Image
     src="/icon.png"
     alt="PARAADS"
-    width={220}
-    height={44}
+    width={350}
+    height={100}
     priority
     className="h-8 w-auto sm:h-9 md:h-10 lg:h-11"
   />
