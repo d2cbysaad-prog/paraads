@@ -32,17 +32,19 @@ export function SiteNav() {
           : 'border-transparent bg-transparent',
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-    <a href="#top" className="flex items-center">
-  <Image
-    src="/icon.png"
-    alt="PARAADS"
-    width={280}
-    height={60}
-    priority
-    className="h-12 w-auto sm:h-13 md:h-14 lg:h-16"
-  />
-</a>
+     <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-3 sm:px-6">
+  <a href="#top" className="flex items-center -ml-1 sm:ml-0">
+    <Image
+      src="/icon.png"
+      alt="PARAADS"
+      width={320}
+      height={70}
+      priority
+      className="h-14 w-auto sm:h-16 md:h-18 lg:h-20"
+    />
+  </a>
+  {/* Baki aapka nav items aur button ka code yahan aayega */}
+</nav>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
