@@ -33,16 +33,16 @@ export function SiteNav() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top">
-          <Image
-            src="/icon.png"
-            alt="PARAADS"
-            width={180}
-            height={40}
-            priority
-          />
-        </a>
-
+    <a href="#top" className="flex items-center">
+  <Image
+    src="/icon.png"
+    alt="PARAADS"
+    width={220}
+    height={44}
+    priority
+    className="h-8 w-auto sm:h-9 md:h-10 lg:h-11"
+  />
+</a>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
