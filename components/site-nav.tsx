@@ -32,12 +32,13 @@ export function SiteNav() {
           : 'border-transparent bg-transparent',
       )}
     >
-      <a href="#top" className="flex items-center">
+      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-3 sm:px-6">
+    <a href="#top" className="flex items-center">
   <Image
-    src="/logo.png"
+    src="/icon.png"
     alt="PARAADS"
     width={220}
-    height={44}
+    height={40}
     priority
     className="h-8 w-auto sm:h-9 md:h-10 lg:h-11"
   />
