@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { ShieldIcon, Menu, X } from 'lucide-react' // Lucide se Menu aur X icons import kiye
+import { Menu, X } from 'lucide-react'
 
 const links = [
   { label: 'The Problem', href: '#problem' },
@@ -13,7 +14,7 @@ const links = [
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false)
-  const [isOpen, setIsOpen] = useState(false) // Mobile menu state add ki
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -32,9 +33,14 @@ export function SiteNav() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top" className="flex items-center gap-2">
-          <ShieldIcon className="h-6 w-6 text-blue" />
-          <span className="font-display text-lg font-bold tracking-tight">Paraads</span>
+        <a href="#top">
+          <Image
+            src="/icon.png"
+            alt="PARAADS"
+            width={180}
+            height={40}
+            priority
+          />
         </a>
 
         {/* Desktop Menu */}
