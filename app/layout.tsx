@@ -17,10 +17,14 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'ParaAds',
-  description:
-    'Attract, Convert And Retain More Customers.',
-  
+  title: "PARAADS",
+  description: "Attract, Convert And Retain More Customers.",
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 }
 
 export const viewport: Viewport = {
